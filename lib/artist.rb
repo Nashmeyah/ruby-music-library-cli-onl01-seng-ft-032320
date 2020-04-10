@@ -38,10 +38,6 @@ class Artist
     end
   end
 
-  # def artist=(artist)
-  #
-  # end
-
 
   # def genres
   #   Genre.all.select {|i| i.artist == self}
