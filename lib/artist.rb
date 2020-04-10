@@ -1,5 +1,5 @@
 class Artist
-  attr_accessor :name
+  attr_accessor :name, :song, :genre
 
   @@all = []
 
@@ -11,12 +11,26 @@ class Artist
     @@all
   end
 
+  def self.destroy_all
+    @@all.clear
+  end
+
   def save
     self.class.all << self
   end
 
-  def self.create(name)
-    @name = name
-    self.new(name).save
+  def self.create(artist)
+    artist = Song.new(artist)
+    artist.save
+    artist
   end
+
+
+  # def new_song(song, genre)
+  #   Song.new(song, self, genre)
+  # end
+
+  # def genres
+  #   Genre.all.select {|i| i.artist == self}
+  # end
 end
