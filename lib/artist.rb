@@ -11,6 +11,9 @@ class Artist
   def self.all
     @@all
   end
+  def songs
+    @songs
+  end
 
   def self.destroy_all
     @@all.clear
