@@ -39,7 +39,7 @@ class Artist
   end
 
   # def artist=(artist)
-  #   
+  #
   # end
 
 
