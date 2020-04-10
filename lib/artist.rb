@@ -30,9 +30,9 @@ class Artist
   end
 
 
-  # def new_song(song, genre)
-  #   Song.new(song, self, genre)
-  # end
+  def add_song(song, genre)
+    Song.new(song, self, genre)
+  end
 
   # def genres
   #   Genre.all.select {|i| i.artist == self}
