@@ -31,8 +31,13 @@ class Song
     self.all.find {|artist| artist.name == name }
   end
 
-  def self.find_or_create_by_name(name)
-    self.find(name) ? self.find(name) : self.new(name)
+  def self.find_or_create_by_name
+    if self.artist.nil?
+      self.artist = Artist.new(name)
+    else
+      self.artist.name = name
+    end
+    @name
   end
 
 
